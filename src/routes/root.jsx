@@ -4,15 +4,15 @@ import React, { useRef, useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 
 const Root = ({ cleanHandler }) => {
-  const location = useLocation();
-  const previousPathnameRef = useRef();
+  // const location = useLocation();
+  // const previousPathnameRef = useRef();
 
-  useEffect(() => {
-    if (previousPathnameRef.current !== location.pathname) {
-      cleanHandler();
-      previousPathnameRef.current = location.pathname;
-    }
-  }, [cleanHandler, location.pathname]);
+  // useEffect(() => {
+  //   if (previousPathnameRef.current !== location.pathname) {
+  //     cleanHandler();
+  //     previousPathnameRef.current = location.pathname;
+  //   }
+  // }, [cleanHandler, location.pathname]);
   
     return (  
         <>  

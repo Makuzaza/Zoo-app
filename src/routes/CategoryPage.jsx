@@ -1,16 +1,21 @@
 import Card from '../components/Card';
+import Search from '../components/Search';
+import { useParams } from 'react-router-dom';
 
-function Animals ({searchHandler, animalList, search, removeHandler, likesHandlerAnimal}) {
-  const filteredAnimalList = animalList.filter(animal =>
-     animal.name.toLowerCase().includes(search.toLowerCase()));
+function CategoryPage (props) {
+  const params = useParams();
+  let category = params.category;
+  // const filteredAnimalList = animalList.filter(animal =>
+  //    animal.name.toLowerCase().includes(search.toLowerCase()));
 
     return (  
         <>  
-     <div><input type="text" placeholder='Search ...' onChange={searchHandler}></input></div>
+     {/* <div><input type="text" placeholder='Search ...' onChange={searchHandler}></input></div> */}
+     <div><Search/></div>
       <main>
-      <h1>Animals:</h1> 
+      <h1>{category}:</h1> 
       
-      {filteredAnimalList.length === 0 ? (
+      {/* {filteredAnimalList.length === 0 ? (
           <h2>No results</h2>
         ) : (
         <div className="cards">
@@ -26,14 +31,28 @@ function Animals ({searchHandler, animalList, search, removeHandler, likesHandle
             />
           ))}
         </div>
-         )}
+         )} */}
+<div className="cards">
+           {props[category].filter(
+            (animal) =>
+     animal.name.toLowerCase().includes(props.search.toLowerCase()))
+           .map((animal, index) => 
+            (<Card key={index} 
+              {...animal}
+              click={() => props.removeHandler(animal.name, category)}
+              plus={() => props.likesHandler(animal.name, "plus", category)}
+              minus={() => props.likesHandler(animal.name, "minus", category)}
+            />
+          ))}
+        </div>
+
       </main>
       
        </> 
     );
 }
 
-export default Animals;
+export default CategoryPage;
 
   {/* <div className='parts'> */}
         {/* <button onClick={() => switchType('animals')}><h1>Animals</h1></button> */}

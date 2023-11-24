@@ -2,19 +2,21 @@
 import React, { useState } from 'react'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './routes/home';
-import Animals from './routes/animals';
-import Birds from './routes/birds';
-import Root from './routes/root';
-import ErrorPage from './routes/error';
+import Home from './routes/Home';
+import CategoryPage from './routes/CategoryPage';
+import Root from './routes/Root';
+import ErrorPage from './routes/Error';
 import { animals, birds } from './animalsList';
-import AnimalPage from './components/animalPage';
-import About from './routes/about';
+// import AnimalPage from './components/animalPage';
+import Card from './components/Card';
+import About from './routes/About';
+import SinglePage from './routes/SinglePage';
 
 // initialize state variables: useState - hook, animalList and search - variables
 function App() {
-  const [animalList, setAnimals] = useState(animals);
-  const [birdList, setBirds] = useState(birds);
+  const [zoo, setZoo] = useState({animals: animals, birds: birds});
+  // const [animalList, setAnimals] = useState(animals);
+  // const [birdList, setBirds] = useState(birds);
   // const [searchAnimal, setSearchAnimal] = useState('');
   // const [searchBird, setSearchBird] = useState('');
   const [search, setSearch] = useState('');
@@ -24,9 +26,9 @@ function App() {
   //   setAnimals(updatedArray)
   // };
 
-  const removeHandler = (name) => {
-    const updatedArray = animalList.filter((animal) => animal.name !== name); 
-    setAnimals(updatedArray)
+  const removeHandler = (name, category) => {
+    const updatedArray = zoo[category].filter((animal) => animal.name !== name); 
+    setZoo({ ...zoo, [category]: updatedArray});
   };
 
   // const removeHandlerBirds = (index) => {
@@ -34,10 +36,10 @@ function App() {
   //   setBirds(updatedArray)
   // };
 
-  const removeHandlerBirds = (name) => {
-    const updatedArray = birdList.filter((bird) => bird.name !== name); 
-    setBirds(updatedArray)
-  };
+  // const removeHandlerBirds = (name) => {
+  //   const updatedArray = birdList.filter((bird) => bird.name !== name); 
+  //   setBirds(updatedArray)
+  // };
 
 // event handlers for switching animal types and searching
   // const switchType = (animalType) => {
@@ -66,8 +68,8 @@ function App() {
     setSearch(event.target.value);
   }
 
-  const likesHandlerAnimal = (name, action) => {
-    const updatedArray = animalList.map((animal) => {
+  const likesHandler = (name, action, category) => {
+    const updatedArray = zoo[category].map((animal) => {
       if (animal.name === name) {
         if (action === "plus") {
           return {...animal, likes: animal.likes + 1};
@@ -78,23 +80,23 @@ function App() {
         return animal;
   }
 }); 
-setAnimals(updatedArray)
+setZoo({ ...zoo, [category]: updatedArray })
 };
 
-const likesHandlerBird = (name, action) => {
-  const updatedArray = birdList.map((bird) => {
-    if (bird.name === name) {
-      if (action === "plus") {
-        return {...bird, likes: bird.likes + 1};
-      } else {
-        return {...bird, likes: bird.likes - 1};
-      }
-    } else {
-      return bird;
-    }
-  });
-setBirds(updatedArray);
-};
+// const likesHandler = (name, action) => {
+//   const updatedArray = birdList.map((bird) => {
+//     if (bird.name === name) {
+//       if (action === "plus") {
+//         return {...bird, likes: bird.likes + 1};
+//       } else {
+//         return {...bird, likes: bird.likes - 1};
+//       }
+//     } else {
+//       return bird;
+//     }
+//   });
+// setBirds(updatedArray);
+// };
 
 // const likesHandlerBird = (name, action) => {
 //   const updatedArray = animalList.map((animal) => {
@@ -115,30 +117,32 @@ const router = createBrowserRouter([
   { path: '/', element:<Root cleanHandler={cleanHandler}/>, 
   errorElement: <ErrorPage/>, children: [
     { path: '/', element: <Home/> },
-    { path: '/animals', 
-    element: (<Animals 
+    { path: ':category', 
+    element: (<CategoryPage 
+      {...zoo}
       // searchHandler={searchHandlerAnimal} 
       // search={searchAnimal} 
       searchHandler={searchHandler} 
       search={search} 
       removeHandler={removeHandler}
-      animalList={animalList}
-      likesHandlerAnimal={likesHandlerAnimal}/>),
+      // animalList={animalList}
+      likesHandler={likesHandler}/>),
     },
-    { path: '/birds', 
-    element: (<Birds 
-      // searchHandlerBird={searchHandlerBird} 
-      // search={searchBird} 
-      searchHandler={searchHandler} 
-      search={search} 
-      removeHandlerBirds={removeHandlerBirds}
-      animalList={birdList}
-      likesHandlerBird={likesHandlerBird}/>),
-    },
-    { path: "animals/:name", 
-    element: <AnimalPage />},
-    { path: "birds/:name", 
-    element: <AnimalPage />},
+    // { path: '/birds', 
+    // element: (<Birds 
+    //   // searchHandlerBird={searchHandlerBird} 
+    //   // search={searchBird} 
+    //   searchHandler={searchHandler} 
+    //   search={search} 
+    //   removeHandlerBirds={removeHandlerBirds}
+    //   animalList={birdList}
+    //   likesHandlerBird={likesHandlerBird}/>),
+    // },
+    { path: ":category/:name", 
+    element: (<SinglePage 
+    {...zoo}/>)},
+    // { path: "birds/:name", 
+    // element: <AnimalPage />},
     { path: '/about', 
     element: <About />}
   ]}

@@ -163,3 +163,32 @@ export const animals = [
     { "name": "Cormorant", "likes": 0 },
     { "name": "Hawk", "likes": 0 }
   ];
+
+  export const fishes = [
+    { name: 'Angelfish', likes: 0 },
+    { name: 'Betta', likes: 0 },
+    { name: 'Catfish', likes: 0 },
+    { name: 'Guppy', likes: 0 },
+    { name: 'Goldfish', likes: 0 },
+    { name: 'Koi', likes: 0 },
+    { name: 'Molly', likes: 0 },
+    { name: 'Neon Tetra', likes: 0 },
+    { name: 'Swordtail', likes: 0 },
+    { name: 'Tetra', likes: 0 },
+    { name: 'Zebrafish', likes: 0 },
+  ];
+  
+  export const insects = [
+    { name: 'Ant', likes: 0 },
+    { name: 'Bee', likes: 0 },
+    { name: 'Butterfly', likes: 0 },
+    { name: 'Dragonfly', likes: 0 },
+    { name: 'Ladybug', likes: 0 },
+    { name: 'Mantis', likes: 0 },
+    { name: 'Mosquito', likes: 0 },
+    { name: 'Praying Mantis', likes: 0 },
+    { name: 'Spider', likes: 0 },
+    { name: 'Termite', likes: 0 },
+    { name: 'Wasp', likes: 0 },
+  ];
+  

@@ -5,7 +5,9 @@ function About () {
         <main >
         <div className="home">
        <h2>Something about</h2>
-        </div></main>
+        </div>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+        </main>
     );
 }
 

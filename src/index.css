@@ -78,7 +78,7 @@ h1 {
   color: white;
 }
 
-header, footer {
+footer {
   width: 100%;
   background-color: #333;
   color: white;
@@ -86,8 +86,12 @@ header, footer {
 }
 
 header { 
+  width: 100%;
+  background-color: #333;
+  color: white;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-left: 20px;
@@ -194,6 +198,7 @@ a.active {
 
 .home {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center; 
   flex-direction: row;
@@ -202,8 +207,8 @@ a.active {
 
 .img_animals {
   margin: 5px;
-  height: 35rem;
-  width: 18rem;
+  height: 25rem;
+  width: 20rem;
   background-image: url('https://images.unsplash.com/photo-1606287201181-42f1340c1306');
   background-size: cover;
   background-position: center;
@@ -218,8 +223,8 @@ a.active {
 
 .img_birds {
   margin: 5px;
-  height: 35rem;
-  width: 18rem;
+  height: 25rem;
+  width: 20rem;
   background-image: url('https://images.unsplash.com/photo-1552943273-ba7dedee6d44');
   background-size: cover;
   background-position: center;
@@ -232,11 +237,88 @@ a.active {
   box-shadow: 0px 0px 20px #c5c4c4;
 }
 
+.img_fishes {
+  margin: 5px;
+  height: 25rem;
+  width: 20rem;
+  background-image: url('https://images.unsplash.com/photo-1604637736034-9d36fc147ea4');
+  background-size: cover;
+  background-position: center;
+  font-size: 20px;
+  padding: 10px;
+  color: #333;
+}
+
+.img_fishes:hover {
+  box-shadow: 0px 0px 20px #c5c4c4;
+}
+
+.img_insects {
+  margin: 5px;
+  height: 25rem;
+  width: 20rem;
+  background-image: url('https://images.unsplash.com/photo-1567177020831-e6261610a5ae');
+  background-size: cover;
+  background-position: center;
+  font-size: 20px;
+  padding: 10px;
+  color: #333;
+}
+
+.img_insects:hover {
+  box-shadow: 0px 0px 20px #c5c4c4;
+}
+
+.single {
+
+}
+
+.img_singlepage {
+  width: 350px;
+  margin-top: 20px;
+}
+
+.font_singlepage {
+  color: white;
+  margin: 10px;
+}
+
+.desc {
+  margin-bottom: 10px;
+}
+
+.likes_single {
+  color: white;
+}
+
+.button_singlepage {
+  margin: 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  background-color: coral;
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.button_singlepage:hover {
+  background: chocolate;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px #fcf9f9;
+
+}
+nav {
+ margin: 20px;
+}
+
 ul {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  gap: 30px;
-  margin-right: 30px;
+  justify-content: right;
+  align-items: center;
+  gap: 20px;
   list-style-type: none;
 }
 
@@ -255,4 +337,3 @@ ul {
 .back {
   margin: 20px;
 }
-

@@ -1,43 +1,23 @@
 import React from 'react';
-import { useParams, useNavigate, useLocation } from "react-router-dom";
-import { animals, birds } from '../animalsList';
-// import {likes} from '../routes/animals';
-
+import { useParams, useNavigate } from "react-router-dom";
 
 const SinglePage = (props) => {
   const params = useParams();
   const navigate = useNavigate();
-//   const location = useLocation();
 
-  const imageUrl = `https://source.unsplash.com/400x400/?${name}`;
+  const imageUrl = `https://source.unsplash.com/400x400/?${params.name.replace(/_/g, ' ')}`;
 
   let animalArray = props[params.category];
-  let data = animalArray.find((animal) => animal.name.toLowerCase() == params.name);
-//   const animal = animals.find((el) => el.name.toLowerCase() === name.toLowerCase());
-//   const bird = birds.find((el) => el.name.toLowerCase() === name.toLowerCase());
-//   const likes = new URLSearchParams(location.search).get('likes') || 0;
+  let data = animalArray.find((animal) => animal.name.toLowerCase() == params.name.replace(/_/g, ' ').toLowerCase());
 
-//   if (!animal) {
-//     return (
-//         <main>
-//         <div>
-//           <img src={imageUrl} alt={bird.name} />
-//           <h1>About {bird.name.toUpperCase()}</h1>
-//           <p>Description will be here</p>
-//           <p>Likes: {bird.likes}</p>
-//           <button onClick={() => navigate(-1)}>Go back</button>
-//         </div>
-//       </main>
-//     )
-// }
   return (
     <main>
       <div>
-        <img src={imageUrl} alt={data.name} />
-        <h1>About {data.name.toUpperCase()}</h1>
-        <p>Description will be here</p>
-        <p>Likes: {data.likes}</p>
-        <button onClick={() => navigate(-1)}>Go back</button>
+        <img className="img_singlepage" src={imageUrl} alt={data.name} />
+        <h2 className='font_singlepage'>About {data.name.toUpperCase()}</h2>
+        <p className='desc'>Description will be here</p>
+        <h2 className='likes_single'>Likes: {data.likes}</h2>
+        <button className='button_singlepage' onClick={() => navigate(-1)}>Go back</button>
       </div>
     </main>
   );

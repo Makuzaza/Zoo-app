@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './routes/Home.jsx';
+import Home from './routes/Home';
 import CategoryPage from './routes/CategoryPage';
 import Root from './routes/Root';
 import ErrorPage from './routes/Error';

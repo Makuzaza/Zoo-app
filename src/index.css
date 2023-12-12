@@ -79,6 +79,10 @@ h1 {
 }
 
 footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   width: 100%;
   background-color: #333;
   color: white;
@@ -95,13 +99,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-left: 20px;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
 }
 
 .animal-image {
@@ -197,18 +194,25 @@ a.active {
 }
 
 .home {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center; 
   flex-direction: row;
-  margin: auto;
+  text-align: center;
+}
+
+.columns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-content: center;
 }
 
 .img_animals {
-  margin: 5px;
-  height: 25rem;
-  width: 20rem;
+  height: 19rem;
+  width: 100%;
   background-image: url('https://images.unsplash.com/photo-1606287201181-42f1340c1306');
   background-size: cover;
   background-position: center;
@@ -219,12 +223,12 @@ a.active {
 
 .img_animals:hover {
   box-shadow: 0px 0px 20px #c5c4c4;
+  color: rgb(207, 98, 58);
 }
 
 .img_birds {
-  margin: 5px;
-  height: 25rem;
-  width: 20rem;
+  height: 19rem;
+  width: 100%;
   background-image: url('https://images.unsplash.com/photo-1552943273-ba7dedee6d44');
   background-size: cover;
   background-position: center;
@@ -235,12 +239,12 @@ a.active {
 
 .img_birds:hover {
   box-shadow: 0px 0px 20px #c5c4c4;
+  color: rgb(207, 98, 58);
 }
 
 .img_fishes {
-  margin: 5px;
-  height: 25rem;
-  width: 20rem;
+  height: 19rem;
+  width: 100%;
   background-image: url('https://images.unsplash.com/photo-1604637736034-9d36fc147ea4');
   background-size: cover;
   background-position: center;
@@ -251,12 +255,12 @@ a.active {
 
 .img_fishes:hover {
   box-shadow: 0px 0px 20px #c5c4c4;
+  color: rgb(207, 98, 58);
 }
 
 .img_insects {
-  margin: 5px;
-  height: 25rem;
-  width: 20rem;
+  height: 19rem;
+  width: 100%;
   background-image: url('https://images.unsplash.com/photo-1567177020831-e6261610a5ae');
   background-size: cover;
   background-position: center;
@@ -267,6 +271,7 @@ a.active {
 
 .img_insects:hover {
   box-shadow: 0px 0px 20px #c5c4c4;
+  color: rgb(207, 98, 58);
 }
 
 .img_singlepage {

@@ -6,7 +6,7 @@ import CategoryPage from './routes/CategoryPage';
 import Root from './routes/root.jsx';
 import ErrorPage from './routes/error.jsx';
 import { animals, birds, fishes, insects } from './animalsList';
-import About from './routes/About';
+import About from './routes/about.jsx';
 import SinglePage from './routes/SinglePage';
 
 function App() {

@@ -223,7 +223,8 @@ a.active {
 
 .img_animals:hover {
   box-shadow: 0px 0px 20px #c5c4c4;
-  color: rgb(207, 98, 58);
+  color: rgb(241, 239, 239);
+  text-shadow: 0 0 10px #333;
 }
 
 .img_birds {
@@ -239,7 +240,8 @@ a.active {
 
 .img_birds:hover {
   box-shadow: 0px 0px 20px #c5c4c4;
-  color: rgb(207, 98, 58);
+  color: rgb(241, 239, 239);
+  text-shadow: 0 0 10px #333;
 }
 
 .img_fishes {
@@ -255,7 +257,8 @@ a.active {
 
 .img_fishes:hover {
   box-shadow: 0px 0px 20px #c5c4c4;
-  color: rgb(207, 98, 58);
+  color: rgb(241, 239, 239);
+  text-shadow: 0 0 10px #333;
 }
 
 .img_insects {
@@ -271,7 +274,8 @@ a.active {
 
 .img_insects:hover {
   box-shadow: 0px 0px 20px #c5c4c4;
-  color: rgb(207, 98, 58);
+  color: rgb(241, 239, 239);
+  text-shadow: 0 0 10px #333;
 }
 
 .img_singlepage {

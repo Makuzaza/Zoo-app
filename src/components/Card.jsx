@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import dislike from '../assets/broken-heart.png';
+import like from '../assets/heart.png';
 
 const Card = ({ name, click, minus, plus, likes }) => {
   const imageUrl = `https://source.unsplash.com/400x400/?${name}`;
@@ -26,12 +28,12 @@ const Card = ({ name, click, minus, plus, likes }) => {
       
       {likes >= 0 ? (
           <div className={`likes  ${likes === 0 ? 'grayscale' : ''}`}>
-            <img className="heart" src="heart.png" alt="heart" />
+            <img className="heart" src={like} alt="heart" />
             {likes}
           </div>
         ) : (
           <div className='likes'>
-            <img className="heart" src="broken-heart.png" alt="broken heart" />
+            <img className="heart" src={dislike} alt="broken heart" />
             {likes}
           </div>
         )}

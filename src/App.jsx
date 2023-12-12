@@ -3,8 +3,8 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './routes/home.jsx';
 import CategoryPage from './routes/CategoryPage';
-import Root from './routes/Root';
-import ErrorPage from './routes/Error';
+import Root from './routes/root.jsx';
+import ErrorPage from './routes/error.jsx';
 import { animals, birds, fishes, insects } from './animalsList';
 import About from './routes/About';
 import SinglePage from './routes/SinglePage';

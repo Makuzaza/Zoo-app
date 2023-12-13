@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../index.css'
 
 function Home () {
@@ -6,12 +6,12 @@ function Home () {
         <main >
         <div className="home">
             <div className='columns'>
-        <Link to='/animals'><div className="img_animals">Animals</div></Link>
-        <Link to='/fishes'><div className="img_fishes">Fishes</div></Link>
+        <NavLink to='/animals'><div className="img_animals">Animals</div></NavLink>
+        <NavLink to='/fishes'><div className="img_fishes">Fishes</div></NavLink>
             </div>
             <div className='columns'>
-        <Link to='/birds'><div className="img_birds">Birds</div></Link>
-        <Link to='/insects'><div className="img_insects">Insects</div></Link>
+        <NavLink to='/birds'><div className="img_birds">Birds</div></NavLink>
+        <NavLink to='/insects'><div className="img_insects">Insects</div></NavLink>
             </div>
         </div>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />

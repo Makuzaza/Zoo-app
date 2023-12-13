@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './routes/Home.jsx';
+import Home from './routes/home.jsx';
 import CategoryPage from './routes/CategoryPage';
-import Root from './routes/Root.jsx';
-import ErrorPage from './routes/Error.jsx';
+import Root from './routes/root.jsx';
+import ErrorPage from './routes/error.jsx';
 import { animals, birds, fishes, insects } from './animalsList';
-import About from './routes/About.jsx';
+import About from './routes/about.jsx';
 import SinglePage from './routes/SinglePage';
 
 function App() {

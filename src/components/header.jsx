@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import '../index.css';
 
 const Header = ({ cleanHandler }) => {
@@ -8,12 +8,12 @@ const Header = ({ cleanHandler }) => {
      <h2 className="logo"><a href='/'>Zoo app</a></h2>
       <nav>
         <ul>
-          <li><NavLink to='/' >Home</NavLink></li>
-          <li><NavLink to='/animals' onClick={() => { cleanHandler() }}>Animals</NavLink></li>
-          <li><NavLink to='/birds' onClick={() => { cleanHandler() }}>Birds</NavLink></li>
-          <li><NavLink to='/fishes' onClick={() => { cleanHandler() }}>Fishes</NavLink></li>
-          <li><NavLink to='/insects' onClick={() => { cleanHandler() }}>Insects</NavLink></li>
-          <li><NavLink to='/about'>About</NavLink></li>
+          <li><Link to='/' >Home</Link></li>
+          <li><Link to='/animals' onClick={() => { cleanHandler() }}>Animals</Link></li>
+          <li><Link to='/birds' onClick={() => { cleanHandler() }}>Birds</Link></li>
+          <li><Link to='/fishes' onClick={() => { cleanHandler() }}>Fishes</Link></li>
+          <li><Link to='/insects' onClick={() => { cleanHandler() }}>Insects</Link></li>
+          <li><Link to='/about'>About</Link></li>
         </ul>
       </nav>
     </header>

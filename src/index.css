@@ -342,3 +342,14 @@ ul {
 .back {
   margin: 20px;
 }
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  color: aliceblue;
+}

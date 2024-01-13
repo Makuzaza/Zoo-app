@@ -2,10 +2,6 @@
 
 This application provides arrays of animals, birds, fishes and insects.
 
-# Zoo app
-
-This application provides arrays of animals, birds, fishes and insects.
-
 Navigation Links:
 
 - Home

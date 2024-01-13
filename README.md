@@ -7,24 +7,38 @@ Navigation Links:
 - Home
 - Animals
 - Birds
+- Fishes
+- Insects
 - About
 - Home Page:
-- Displaying four big images that serve as links to the Animals and Birds pages.
+- Displaying four big images that serve as links to the Zoo pages.
 
-Animals Page:
+## Animals Page:
 
 - Creating a page that lists all animals.
 - Implementing a search feature to allow users to search for specific animals by name.
-- Birds Page:
+
+## Birds Page:
+
 - Creating a page that lists all birds.
 - Implementing a search feature to allow users to search for specific birds by name.
 
-About Page:
+## Fishes Page:
+
+- Creating a page that lists all fishes.
+- Implementing a search feature to allow users to search for specific fishes by name.
+
+## Insects Page:
+
+- Creating a page that lists all insects.
+- Implementing a search feature to allow users to search for specific insects by name.
+
+## About Page:
 
 - Creating an About page that provides information about the project.
 - Including a summary of the features implemented.
 - Sharing what I learned while working on this project.
 
-Additional task:
+## Additional task:
 
 - Refactoring the application to utilise CategoryPage and SinglePage components instead of the Animal, Bird, Fishes and Insects components.

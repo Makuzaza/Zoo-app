@@ -2,7 +2,7 @@
 
 This application provides arrays of animals, birds, fishes and insects.
 
-Navigation Links:
+## Navigation Links:
 
 - Home
 - Animals
@@ -10,7 +10,9 @@ Navigation Links:
 - Fishes
 - Insects
 - About
-- Home Page:
+
+## Home Page:
+
 - Displaying four big images that serve as links to the Zoo pages.
 
 ## Animals Page:

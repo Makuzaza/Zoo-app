@@ -1,3 +1,5 @@
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=Makuzaza_Zoo-app)](https://sonarcloud.io/summary/new_code?id=Makuzaza_Zoo-app)
+
 # Zoo
 
 In this project, you practice creating components using state and props. Also, you learn how to work with lists and manipulate the state.

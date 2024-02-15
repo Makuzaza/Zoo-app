@@ -1,3 +1,5 @@
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=Makuzaza_Zoo-app)](https://sonarcloud.io/summary/new_code?id=Makuzaza_Zoo-app)
+
 # Zoo app
 
 This application provides arrays of animals, birds, fishes and insects.

@@ -4,7 +4,7 @@ import dislike from '../assets/broken-heart.png';
 import like from '../assets/heart.png';
 
 const Card = ({ name, click, minus, plus, likes }) => {
-  const imageUrl = `https://source.unsplash.com/400x400/?${name}`;
+  const imageUrl = `https://picsum.photos/400/400?random=${name}`;
 
   return (
     <div className='card'>

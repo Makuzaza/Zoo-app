@@ -5,7 +5,7 @@ const SinglePage = (props) => {
   const params = useParams();
   const navigate = useNavigate();
 
-  const imageUrl = `https://source.unsplash.com/400x400/?${params.name.replace(/_/g, ' ')}`;
+  const imageUrl = `https://picsum.photos/400/400?random=${params.name.replace(/_/g, ' ')}`;
 
   let animalArray = props[params.category];
   let data = animalArray.find((animal) => animal.name.toLowerCase() == params.name.replace(/_/g, ' ').toLowerCase());
